@@ -6,10 +6,10 @@
 nav {
     background-color: black;
     height: 50px;
+    display: flex;
+    justify-content: space-between;
     ul {
         display:flex;
-        justify-content: right;
-        align-items: center;
         margin-right: 50px;
 
         li{
@@ -27,7 +27,7 @@ nav {
                 bottom: 0;
                 left: 0;
                 right: 0;
-                padding-top:15px;;
+                padding-top:15px;
                 text-align: center;
             }
         }
@@ -37,6 +37,5 @@ nav {
 .hover:hover{
     color:black;
     background-color: white;
-
 }
 
