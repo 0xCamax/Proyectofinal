@@ -37,4 +37,83 @@ nav ul li a {
   background-color: white;
 }
 
+.contenedor {
+  padding: 10px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "g1 g1 g1" "g2 g2 g3" "g2 g2 g4";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.g1 {
+  grid-area: g1;
+}
+
+.g2 {
+  grid-area: g2;
+}
+
+.g3 {
+  grid-area: g3;
+}
+
+.g4 {
+  grid-area: g4;
+}
+
+.jc-start {
+  justify-content: flex-start;
+}
+
+.jc-center {
+  justify-content: center;
+}
+
+.jc-end {
+  justify-content: flex-end;
+}
+
+.jc-between {
+  justify-content: space-between;
+}
+
+.jc-around {
+  justify-content: space-around;
+}
+
+.ai-start {
+  align-items: flex-start;
+}
+
+.ai-center {
+  align-items: center;
+}
+
+.ai-end {
+  align-items: flex-end;
+}
+
+.ai-between {
+  align-items: space-between;
+}
+
+.ai-around {
+  align-items: space-around;
+}
+
+.fd-column {
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
 /*# sourceMappingURL=estilos.css.map */

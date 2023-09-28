@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+$content: (
+    start: flex-start,
+    center: center,
+    end: flex-end,
+    between: space-between,
+    around: space-around
+);
+
 nav {
     background-color: black;
     height: 50px;
@@ -39,3 +47,47 @@ nav {
     background-color: white;
 }
 
+
+.contenedor{
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+}
+
+.grid{
+    display: grid;
+    grid-template-areas:
+    "g1 g1 g1"
+    "g2 g2 g3"
+    "g2 g2 g4";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+@for $i from 1 to 5 {
+    .g#{$i}{
+        grid-area: g#{$i};
+    }
+}
+
+@each $position in start center end between around{
+    .jc-#{$position}{
+    justify-content: map-get($content, $position);
+    }
+}
+
+@each $position in start center end between around{
+    .ai-#{$position}{
+    align-items: map-get($content, $position);
+    }
+}
+
+.fd-column{
+    flex-direction: column;
+}
+
+.flex{
+    display: flex;
+}
