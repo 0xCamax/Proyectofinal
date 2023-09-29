@@ -1,30 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/MYNTER/favicon.ico" type="image/logo">
-    <link rel="stylesheet" href="/estilos.css">
-    <title>Mi pagina</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Conoce nuestros servicios">
+        <meta name="keywords" content="paginas web html css javascrip">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+        <link rel="icon" href="/MYNTER/favicon.ico" type="image/logo">
+        <link rel="stylesheet" href="/estilos.css">
+        <title>Servicios</title>
+    </head>
 <body>
     <header>
-        <nav>
-            <img src="MYNTER/MYNTER-04.png">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img class="logonavbar navbar-brand" src="MYNTER/MYNTER-04.png">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="/index.html">Inicio</a>
+                    <a class="nav-item nav-link" href="/servicios.html">Servicios</a>
+                    <a class="nav-item nav-link" href="/contacto.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+        <div class="minavbar">
+            <img class="logonavbar" src="MYNTER/MYNTER-04.png">
             <ul>
                 <li><a class="hover" href="/index.html">Inicio</a></li>
                 <li><a class="hover" href="/servicios.html">Servicios</a></li>
                 <li><a class="hover" href="/contacto.html">Contacto</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
     <main>
-        <div></div>
-        <section></section>
-        <aside></aside>
-        <article></article>
+        <section class="servicios">
+            <div id="accordion">
+
+                <div class="card">
+                  <div class="card-header">
+                    <a class="text-dark" data-toggle="collapse" href="#collapseOne">
+                      Consultoria
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, officiis provident nobis consequatur eaque totam earum atque voluptates et ea sunt, illum culpa voluptas nesciunt. Voluptatem laudantium excepturi maxime laborum.
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed text-dark" data-toggle="collapse" href="#collapseTwo">
+                      Diseño
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere excepturi maxime qui impedit minus atque tempora, deleniti veniam ab tenetur! Dignissimos natus non unde est accusamus, eum dicta dolorum doloremque.
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <div class="card-header">
+                    <a class="collapsed text-dark" data-toggle="collapse" href="#collapseThree">
+                      Paginas web
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam cum tempora cupiditate reprehenderit totam quibusdam voluptatibus vitae repudiandae facilis quod ut ipsa debitis eius dolorem vel, eaque soluta porro quas!
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+        </section>
     </main>
     <footer>
+        <div class="flex jc-between footer">
+            <aside>
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/servicios.html">Servicios</a></li>
+                    <li><a href="/contacto.html">Contacto</a></li>
+                </ul>
+            </aside>
+            <aside>
+                <ul class="text-end">
+                    <li><a href="https://twitter.com/" target="_blank">X</a></li>
+                    <li><a href="https://whatsapp.com/" target="_blank">Whatsapp</a></li>
+                    <li><a href="https://facebook.com/" target="_blank">Facebook</a></li>
+                </ul>
+            </aside>
+            </div>
+            <h8 class="flex jc-center">Diseñado por Alan con <3 2023<h8>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -11,62 +11,77 @@ $content: (
     around: space-around
 );
 
-nav {
+.minavbar {
     background-color: black;
-    height: 50px;
-    display: flex;
+    height:65px;
+    width:100vw;
+    display:flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
     ul {
-        display:flex;
-        margin-right: 50px;
+        padding: 0;
+        display: flex;
+        margin: 0px 50px 0px 0px;
 
         li{
-            position: relative;
             width:100px;
-            height:50px;
+            height:65px;
             list-style: none;
-            display: inline;
             
             a{
                 text-decoration: none;
                 color: white;
-                position:absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                padding-top:15px;
-                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
             }
         }
     }
 }
+
+
+.logonavbar{
+    height: 50px;
+    width: auto;
+}
+
 
 .hover:hover{
     color:black;
     background-color: white;
 }
 
+// Tamaños: 390px, 480px, 600px, 768px y 1023px, 1024px, 1200px.
 
-.contenedor{
-    padding: 10px;
-    margin: 15px;
+.seccion{
     border: 1px solid black;
-    border-radius: 10px;
     background-color: gray;
+    width:100vw;
+    height:844px;
 }
 
-.grid{
-    display: grid;
-    grid-template-areas:
-    "g1 g1 g1"
-    "g2 g2 g3"
-    "g2 g2 g4";
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+p{
+    max-width: 80vw;
+    text-align: justify;
 }
 
-@for $i from 1 to 5 {
+
+@each $width in 390px 480px 600px 768px 980px{
+    @media (max-width:$width) {
+        .minavbar{
+            display: none;
+        }
+    }
+}
+
+@for $i from 1 to 12 {
     .g#{$i}{
         grid-area: g#{$i};
     }
@@ -90,4 +105,46 @@ nav {
 
 .flex{
     display: flex;
+}
+
+.footer { 
+    background-color: rgb(54, 54, 54);
+    border: none;
+        ul {
+            margin: 50px;
+        }
+            li {
+                list-style: none;
+                    a {
+                        color: black;
+                    }
+            }
+}
+
+.text-end{
+    text-align: end;
+}
+
+h8{
+    background-color: rgb(54, 54, 54);
+    color: white;
+
+}
+
+.servicios {
+    padding: 50px 200px 50px 200px;
+    background-color: gray;
+    height: 844px;
+}
+
+@each $width in 390px 480px 600px 768px 980px{
+    @media (max-width:$width) {
+        .servicios {
+            padding: 50px 50px 50px 50px;
+        }
+    }
+}
+
+.contacto{
+    padding: 50px;
 }
